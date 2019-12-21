@@ -1,33 +1,33 @@
 extends ./layouts/common
 block head
-#carouselExampleCaptions.carousel.slide(data-ride='carousel')
-  ol.carousel-indicators
-    li.active(data-target='#carouselExampleCaptions', data-slide-to='0')
-    li(data-target='#carouselExampleCaptions', data-slide-to='1')
-    li(data-target='#carouselExampleCaptions', data-slide-to='2')
-  .carousel-inner
-    .carousel-item.active
-      img.d-block.w-100(src='./static/images/beautiful_girls.jpg', alt='...')
-      .carousel-caption.d-none.d-sm-block.mb-50
-        a.btn.btn-primary.btn-lg.active.d-block(href='/api/v1/download/girls1', role='button', aria-pressed='true') Dowload image
-        h5 First slide label
-        p Nulla vitae elit libero, a pharetra augue mollis interdum.
-    .carousel-item
-      img.d-block.w-100(src='./static/images/beautiful_woman.jpg', alt='...')
-      .carousel-caption.d-none.d-sm-block.mb-50
-        a.btn.btn-primary.btn-lg.active.d-block(href='/api/v1/download/girls2', role='button', aria-pressed='true') Dowload image
-        h5 Second slide label
-        p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    .carousel-item
-      img.d-block.w-100(src='./static/images/girl_ultra.jpg', alt='...')
-      .carousel-caption.d-none.d-sm-block.mb-50
-        a.btn.btn-primary.btn-lg.active.d-block(href='/api/v1/download/girls2', role='button', aria-pressed='true') Dowload image
-        h5 Third slide label
-        p Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-  a.carousel-control-prev(href='#carouselExampleCaptions', role='button', data-slide='prev')
-    span.carousel-control-prev-icon(aria-hidden='true')
-    span.sr-only Previous
-  a.carousel-control-next(href='#carouselExampleCaptions', role='button', data-slide='next')
-    span.carousel-control-next-icon(aria-hidden='true')
+  #carouselExampleCaptions.carousel.slide(data-ride='carousel')
+    ol.carousel-indicators
+      li.active(data-target='#carouselExampleCaptions' data-slide-to='0')
+      li(data-target='#carouselExampleCaptions' data-slide-to='1')
+      li(data-target='#carouselExampleCaptions' data-slide-to='2')
+    .carousel-inner
+      .carousel-item.active
+        img.d-block.w-100(src='./static/images/beautiful_girls.jpg' alt='...')
+        .carousel-caption.d-none.d-sm-block.mb-50
+          a.btn.btn-primary.btn-lg.active.d-block(href='/api/v1/download/girls1' role='button' aria-pressed='true') Dowload image
+          h5 First slide label
+          p Nulla vitae elit libero, a pharetra augue mollis interdum.
+      .carousel-item
+        img.d-block.w-100(src='./static/images/beautiful_woman.jpg' alt='...')
+        .carousel-caption.d-none.d-sm-block.mb-50
+          a.btn.btn-primary.btn-lg.active.d-block(href='/api/v1/download/girls2' role='button' aria-pressed='true') Dowload image
+          h5 Second slide label
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      .carousel-item
+        img.d-block.w-100(src='./static/images/girl_ultra.jpg' alt='...')
+        .carousel-caption.d-none.d-sm-block.mb-50
+          a.btn.btn-primary.btn-lg.active.d-block(href='/api/v1/download/girls2' role='button' aria-pressed='true') Dowload image
+          h5 Third slide label
+          p Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+    a.carousel-control-prev(href='#carouselExampleCaptions' role='button' data-slide='prev')
+      span.carousel-control-prev-icon(aria-hidden='true')
+      span.sr-only Previous
+    a.carousel-control-next(href='#carouselExampleCaptions' role='button' data-slide='next')
+      span.carousel-control-next-icon(aria-hidden='true')
       span.sr-only Next
-
+block footer
