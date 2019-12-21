@@ -1,0 +1,48 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible', content='ie=edge')
+  title Home Page
+  link(rel='icon', href='./static/images/logo.png', type='image/x-icon')
+  link(rel='stylesheet', href='./static/stylesheets/style.css')
+  link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css', integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh', crossorigin='anonymous')
+  style.
+    .mb-50{
+    margin-bottom: 5%;
+    }
+#carouselExampleCaptions.carousel.slide(data-ride='carousel')
+  ol.carousel-indicators
+    li.active(data-target='#carouselExampleCaptions', data-slide-to='0')
+    li(data-target='#carouselExampleCaptions', data-slide-to='1')
+    li(data-target='#carouselExampleCaptions', data-slide-to='2')
+  .carousel-inner
+    .carousel-item.active
+      img.d-block.w-100(src='./static/images/beautiful_girls.jpg', alt='...')
+      .carousel-caption.d-none.d-sm-block.mb-50
+        a.btn.btn-primary.btn-lg.active.d-block(href='/api/v1/download/girls1', role='button', aria-pressed='true') Dowload image
+        h5 First slide label
+        p Nulla vitae elit libero, a pharetra augue mollis interdum.
+    .carousel-item
+      img.d-block.w-100(src='./static/images/beautiful_woman.jpg', alt='...')
+      .carousel-caption.d-none.d-sm-block.mb-50
+        a.btn.btn-primary.btn-lg.active.d-block(href='/api/v1/download/girls2', role='button', aria-pressed='true') Dowload image
+        h5 Second slide label
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    .carousel-item
+      img.d-block.w-100(src='./static/images/girl_ultra.jpg', alt='...')
+      .carousel-caption.d-none.d-sm-block.mb-50
+        a.btn.btn-primary.btn-lg.active.d-block(href='/api/v1/download/girls2', role='button', aria-pressed='true') Dowload image
+        h5 Third slide label
+        p Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+  a.carousel-control-prev(href='#carouselExampleCaptions', role='button', data-slide='prev')
+    span.carousel-control-prev-icon(aria-hidden='true')
+    span.sr-only Previous
+  a.carousel-control-next(href='#carouselExampleCaptions', role='button', data-slide='next')
+    span.carousel-control-next-icon(aria-hidden='true')
+    span.sr-only Next
+    block head
+script(src='https://code.jquery.com/jquery-3.4.1.slim.min.js', integrity='sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n', crossorigin='anonymous')
+script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js', integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo', crossorigin='anonymous')
+script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js', integrity='sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6', crossorigin='anonymous')
+    
