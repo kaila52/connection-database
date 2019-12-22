@@ -11,10 +11,19 @@ const db = require('./user.models')
 //     }
 // ])
 
-db.find({}).then((data) => {
-    console.log(data);
-})
+// db.find({user:'kaila52'}).then((data) => {
+//     console.log(data);
+//     console.log(data[0].id);
+// })
 // db.remove({email: 'admin@gmail.com'}).then(()=>{
 //     console.log('ok');
 // })
 
+
+var s = []
+console.log(s);
+if(undefined){
+    console.log(2);
+}else{
+    console.log(3);
+}
