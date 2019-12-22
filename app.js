@@ -25,6 +25,6 @@ app.use('/',middleware.auth, indexRouter);
 app.use('/cards',middleware.auth, cardsRouter);
 
 
-app.listen(port, () => {
+app.listen(process.env.PORT||port, () => {
     console.log(`listen on ${port}`);
 })
