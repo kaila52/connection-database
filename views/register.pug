@@ -5,7 +5,11 @@ block head
             h2.form-signin-heading Please register
             input.form-control(type='text' name='fullname' placeholder='Full Name')
             input.form-control(type='text' name='user' placeholder='User Name')
-            input.form-control(type='text' name='email' placeholder='Email Address')
-            input.form-control(type='password' name='password' placeholder='Password')
+            input.form-control(type='text' name='email' placeholder='Email Address' pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Enter email")
+            input.form-control(type='password' name='password' placeholder='Password' pattern="[^'\x22]+" title="Invalid input")
             button.btn.btn-lg.btn-primary.btn-block(type='submit') Register
+            a(href='/login')
+                i.fad.fa-angle-double-left
+                |  Login
+                
 block footer

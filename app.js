@@ -2,7 +2,7 @@ const express = require('express');
 const app = express()
 const cookieParser = require('cookie-parser')
 const path = require('path')
-const port = 3000
+const port = process.env.PORT||3000
 
 const dbUser = require('./models/user.models');
 
@@ -19,12 +19,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser())
 app.use('/static', express.static(path.join(__dirname, 'public')))
 
-app.use('/login', loginRouter);
 app.use('/register', registerRouter);
+app.use('/login', loginRouter);
 app.use('/',middleware.auth, indexRouter);
 app.use('/cards',middleware.auth, cardsRouter);
 
-
-app.listen(process.env.PORT||port, () => {
+app.listen(port, () => {
     console.log(`listen on ${port}`);
 })

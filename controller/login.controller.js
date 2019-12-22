@@ -8,7 +8,6 @@ module.exports = {
         } 
     },
     index: (req, res, next) => {
-        res.redirect('/')
+        res.json({messenger:'200'}) 
     }
-
 }
