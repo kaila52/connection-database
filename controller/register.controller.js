@@ -14,6 +14,6 @@ module.exports = {
             email: req.body.email,
             password: req.body.password,
         })
-        res.redirect('/login')
+        res.json('200')
     }
 }

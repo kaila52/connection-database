@@ -8,6 +8,6 @@ module.exports = {
         } 
     },
     index: (req, res, next) => {
-        res.json({messenger:'200'}) 
+        res.json('200') 
     }
 }

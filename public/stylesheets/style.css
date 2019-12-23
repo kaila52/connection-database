@@ -5,8 +5,13 @@
 }
 body {
     background-image: url('../images/bg.jpg');	
-    background-repeat: no-repeat;
     background-size: 100% auto;
+}
+.w-125px{
+  width: 125px;
+}
+.w-10{
+  width: 10%;
 }
 .mb-50{
   margin-bottom: 5%

@@ -1,5 +1,25 @@
 extends ./layouts/headAndFooter
 block head
+  nav.navbar.navbar-expand-lg.navbar-light.bg-light.sticky-top
+    a.ml-5(href='./')
+        img(src='./static/images/logo.png' alt='logo')
+    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+        
+        ul.navbar-nav.m-auto
+            li.nav-item.active
+                a.nav-link.px-3.border.border-success.rounded-pill.m-2.text-center(href='./login')
+                    strong
+                        | LOGIN
+                    span.sr-only (current)
+            li.nav-item.active
+                a.nav-link.px-3.border.border-success.rounded-pill.m-2.text-center(href='./register')
+                    strong REGISTER 
+                    span.sr-only (current)
+        div.w-10
+
+  //-------   navbar
   .wrapper
   form.form-signin
     h2.form-signin-heading Please login

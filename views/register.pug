@@ -1,15 +1,35 @@
 extends ./layouts/headAndFooter
 block head
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light.sticky-top
+        a.ml-5(href='./')
+            img(src='./static/images/logo.png' alt='logo')
+        button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+        #navbarSupportedContent.collapse.navbar-collapse
+
+            ul.navbar-nav.m-auto
+                li.nav-item.active
+                    a.nav-link.px-3.border.border-success.rounded-pill.m-2.text-center(href='./login')
+                        strong
+                            | LOGIN
+                        span.sr-only (current)
+                li.nav-item.active
+                    a.nav-link.px-3.border.border-success.rounded-pill.m-2.text-center(href='./register')
+                        strong REGISTER 
+                        span.sr-only (current)
+            div.w-10
+
+    //-------   navbar
     .wrapper
-        form.form-signin(method='POST')
+        form.form-signin
             h2.form-signin-heading Please register
-            input.form-control(type='text' name='fullname' placeholder='Full Name')
-            input.form-control(type='text' name='user' placeholder='User Name')
-            input.form-control(type='text' name='email' placeholder='Email Address' pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Enter email")
-            input.form-control(type='password' name='password' placeholder='Password' pattern="[^'\x22]+" title="Invalid input")
-            button.btn.btn-lg.btn-primary.btn-block(type='submit') Register
+            div
+                .attr
+            input#fullname.form-control(type='text' name='fullname' placeholder='Full Name')
+            input#user.form-control(type='text' name='user' placeholder='User Name')
+            input#email.form-control(type='text' name='email' placeholder='Email Address' pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Enter email")
+            input#password.form-control(type='password' name='password' placeholder='Password' pattern=".{6,}" title="Six or more characters")
+            button#button-register.btn.btn-lg.btn-primary.btn-block(type='button') Register
             a(href='/login')
                 i.fad.fa-angle-double-left
                 |  Login
-                
-block footer

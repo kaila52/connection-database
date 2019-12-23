@@ -1,0 +1,53 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible', content='ie=edge')
+  title Demo
+  style.
+    .border {
+    background: url('./static/images/backgroud-game.jpg');
+    width: 1300px;
+    height: 500px;
+    border: 1px solid black;
+    }
+    .animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 64px;
+    height: 64px;
+    background: url('./static/images/mario.png');
+    }
+    @keyframes play {
+    100% {
+    background-position-x: -256px;
+    }
+    }
+.border
+  .animation.running
+script(src='https://code.jquery.com/jquery-3.4.1.js', integrity='sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=', crossorigin='anonymous')
+script.
+  $(document).keydown(function () {
+  var keycode = event.which;
+  var speed = 10
+  switch (keycode) {
+  case 37:
+  $('.animation').css({ 'background-position-y': '-64px', 'animation': 'play 0.5s steps(4) infinite' })//, playy 2s steps(4) infinite
+  $('.animation').css('left', function (index, value) { return parseFloat(value) - speed; });
+  break;
+  case 38:
+  $('.animation').css({ 'background-position-y': '64px', 'animation': 'play 0.5s steps(4) infinite' })
+  $('.animation').css('top', function (index, value) { return parseFloat(value) - speed; });
+  break;
+  case 39:
+  $('.animation').css({ 'background-position-y': '128px', 'animation': 'play 0.5s steps(4) infinite' })
+  $('.animation').css('left', function (index, value) { return parseFloat(value) + speed; });
+  break;
+  case 40:
+  $('.animation').css({ 'background-position-y': '0px', 'animation': 'play 0.5s steps(4) infinite' })
+  $('.animation').css('top', function (index, value) { return parseFloat(value) + speed; });
+  break;
+  }
+  });

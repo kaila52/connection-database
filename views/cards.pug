@@ -1,6 +1,32 @@
 extends ./layouts/headAndFooter
 block head
-    .row
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light.sticky-top
+        a.ml-5(href='./')
+            img(src='./static/images/logo.png' alt='logo')
+        button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+        #navbarSupportedContent.collapse.navbar-collapse
+            ul.navbar-nav.m-auto
+                li.nav-item.active
+                    a.nav-link.px-3.border.border-success.rounded-pill.m-2.text-center(href='./')
+                        strong
+                            | HOME
+                        span.sr-only (current)
+                li.nav-item.active
+                    a.nav-link.px-3.border.border-success.rounded-pill.m-2.text-center(href='./cards')
+                        strong CARDS 
+                        span.sr-only (current)
+                li.nav-item.active
+                    a.nav-link.px-3.border.border-success.rounded-pill.m-2.text-center(href='./game')
+                        strong GAME 
+                        span.sr-only (current)
+            div.my-2.my-lg-0.d-flex.justify-content-center.testjq
+                a.nav-link.px-3.border.border-success.rounded-pill.m-2.text-center(href='/')
+                    strong
+                        | Sign Out 
+                    i.fad.fa-sign-out-alt
+    //-------   navbar
+    .row.no-gutters
         .col-md-3
             .card
                 img.card-img-top(src='./static/images/bleu-de-chanel-deodorant-spray-3-4fl-oz--packshot.jpg' alt='...')
@@ -37,4 +63,40 @@ block head
                         | Some quick example text to build on the card title and make up the bulk of
                         | the card&apos;s content.
                     a.btn.btn-primary(href='#') Go somewhere
+        .col-md-3
+            .card
+                img.card-img-top(src='./static/images/bleu-de-chanel-travel-set-1pce-packshot.jpg' alt='...')
+                .card-body
+                    h5.card-title Card title
+                    p.card-text
+                        | Some quick example text to build on the card title and make up the bulk of
+                        | the card&apos;s content.
+                    a.btn.btn-primary(href='#') Go somewhere
+        .col-md-3
+            .card
+                img.card-img-top(src='./static/images/bleu-de-chanel-eau-de-toilette-refillable-travel-spray.jpg' alt='...')
+                .card-body
+                    h5.card-title Card title
+                    p.card-text
+                        | Some quick example text to build on the card title and make up the bulk of
+                        | the card&apos;s content.
+                    a.btn.btn-primary(href='#') Go somewhere
+        .col-md-3
+            .card
+                img.card-img-top(src='./static/images/bleu-de-chanel-shower-gel.jpg' alt='...')
+                .card-body
+                    h5.card-title Card title
+                    p.card-text
+                        | Some quick example text to build on the card title and make up the bulk of
+                        | the card&apos;s content.
+                    a.btn.btn-primary(href='#') Go somewhere
+        .col-md-3
+            .card
+                img.card-img-top(src='./static/images/bleu-de-chanel-deodorant-spray-3-4fl-oz--packshot.jpg' alt='...')
+                .card-body
+                    h5.card-title Card title
+                    p.card-text
+                        | Some quick example text to build on the card title and make up the bulk of
+                        | the card&apos;s content.
+                    a.btn.btn-primary(href='#') Go somewhere                                    
 block footer

@@ -9,6 +9,7 @@ const dbUser = require('./models/user.models');
 const indexRouter = require('./router/index');
 const loginRouter = require('./router/login');
 const cardsRouter = require('./router/cards');
+const gameRouter = require('./router/game');
 const registerRouter = require('./router/register');
 const middleware = require('./middelware/auth.middleware')
 
@@ -23,6 +24,7 @@ app.use('/register', registerRouter);
 app.use('/login', loginRouter);
 app.use('/',middleware.auth, indexRouter);
 app.use('/cards',middleware.auth, cardsRouter);
+app.use('/game',middleware.auth, gameRouter);
 
 app.listen(port, () => {
     console.log(`listen on ${port}`);
